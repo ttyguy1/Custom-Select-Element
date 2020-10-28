@@ -1,0 +1,84 @@
+.custom-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  width: 100%;
+}
+
+.custom-select .title {
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  height: 34px;
+  padding: 0 1rem 0 .5rem;
+  font-size: 14px;
+  color: #000000;
+  line-height: 34px;
+  cursor: pointer;
+}
+
+.custom-select.open .title {
+  border-radius: 3px 3px 0 0;
+}
+
+.custom-select .title svg {
+  position: absolute;
+  top: 9px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  fill: #333333;
+}
+
+.custom-select .options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, .2);
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 200;
+}
+
+.custom-select.open .options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.custom-select .option {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: .5rem;
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.custom-select .option svg {
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+.custom-select .option:hover {
+  background-color: #efefef;
+  cursor: pointer;
+}
+
+.custom-select .option.selected {
+  background-color: #f28d20;
+  color: #ffffff;
+}
+
+.custom-select .option.selected svg {
+  fill: #ffffff;
+}
